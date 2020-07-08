@@ -1,15 +1,13 @@
 /// <reference types="cypress" />
 
-import addressPage from '../support/locators/address'
-import homepage from '../support/locators/homepage'
-import cartPage from '../support/locators/cart'
-import summaryPage from '../support/locators/summary'
-import signinPage from '../support/locators/signin'
-import shippingPage from '../support/locators/shipping'
-import paymentPage from '../support/locators/payment'
+import addressPage from '../../support/locators/address'
+import homepage from '../../support/locators/homepage'
+import cartPage from '../../support/locators/cart'
+import summaryPage from '../../support/locators/summary'
+import shippingPage from '../../support/locators/shipping'
+import paymentPage from '../../support/locators/payment'
 
 describe('Tests relate to store',()=>{
-
 
     beforeEach(()=>{
         cy.visit('')
