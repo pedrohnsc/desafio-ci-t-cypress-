@@ -2,8 +2,9 @@
 
 import Isemail from 'isemail'
 
-describe('Test on get users', () => {
-  it('Get user', () => {
+describe('API Testing using GET and POST methods', () => {
+ 
+  it('All users must have a name, username, and email. 2. Their Email must be valid. 3. Their Company catchphrase must have less than 50 characters.', () => {
     cy.request({
       method: 'GET',
       url: 'https://jsonplaceholder.typicode.com/users'
@@ -21,7 +22,7 @@ describe('Test on get users', () => {
     })
   })
 
-  it('Post', () => {
+  it('1. Save a new post using a userId got by "GET /users" API.', () => {
     cy.request({
       method: 'GET',
       url: 'https://jsonplaceholder.typicode.com/users'
@@ -40,8 +41,9 @@ describe('Test on get users', () => {
         headers: {
           'Content-type': 'application/json; charset=UTF-8'
         }
-
       }).its('status').should('eql', 201)
     })
   })
+
+  /*NOTE: This API return fake data, so i couldn't validate return errors as requested on question 2*/
 })
