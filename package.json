@@ -1,25 +1,36 @@
 {
   "name": "desafio-ci-t-cypress",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "QA Challange for CI&T",
   "scripts": {
     "open": "cypress open",
-    "cypress:run": "cypress run"
+    "cypress:run": "cypress run",
+    "lint:fix": "standard --fix"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pedrohnsc/desafio-ci-t-cypress-.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "standard": {
+    "globals": [
+      "beforeEach",
+      "describe",
+      "it",
+      "request",
+      "expect",
+      "cy",
+      "Cypress"
+    ]
+  },
+  "author": "Pedro Henrique Do Nascimento <pedrohnsc@gmail.com> (https://www.linkedin.com/in/pedro-henrique-do-nascimento/)",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/pedrohnsc/desafio-ci-t-cypress-/issues"
   },
   "homepage": "https://github.com/pedrohnsc/desafio-ci-t-cypress-#readme",
   "dependencies": {
     "cypress": "^4.10.0",
-    "isemail": "^3.2.0"
+    "isemail": "^3.2.0",
+    "standard": "^14.3.4"
   }
 }
