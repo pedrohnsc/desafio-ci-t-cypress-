@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import signin from '../support/locators/signin'
+import signin from './locators/signin'
 
 Cypress.Commands.add('login', () => {
   cy.fixture('userData').then((user)=>{
