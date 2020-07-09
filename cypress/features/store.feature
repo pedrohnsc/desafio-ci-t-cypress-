@@ -25,3 +25,18 @@ Scenario: Make a purchase with a unregistered user with bank wire
 When i register
 And i choose payment by bank wire
 Then my order must be completed successfully. 
+
+Scenario: Try to register with invalid data
+When i try to register with invalid data
+Then i should not be able to proceed to checkout
+
+
+Feature: Search Products
+
+    As a user, i want to filter what kind of products i want so see
+
+Background: Search for a T-Shirt
+Given i search for a T-shirt
+
+Scenario: Search for a T-shirt
+Then i should see all products that looks like a T-shirt
