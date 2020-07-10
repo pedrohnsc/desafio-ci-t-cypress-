@@ -1,10 +1,12 @@
 /// <reference types="cypress" />
+import constants from './constants'
+
 import signin from './locators/signin'
 
 Cypress.Commands.add('login', () => {
   cy.fixture('userData').then((user)=>{
-    cy.get(signin.INPUT_EMAIL).should('be.visible').type(user.email)
-    cy.get(signin.INPUT_PASSWORD).should('be.visible').type(user.password)
-    cy.get(signin.BTN_LOGIN).should('be.visible').click()
+    constants.fillFieldAndPressEnter(signin.INPUT_EMAIL,user.email)
+    constants.fillFieldAndPressEnter(signin.INPUT_PASSWORD,user.password)
+    constants.clickWhenClickable(signin.BTN_LOGIN)
   })
 })
