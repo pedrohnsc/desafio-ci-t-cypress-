@@ -2,6 +2,8 @@
 
 ---
 
+## All the test scenarios are located on feature files
+
 ## Execution
 
 ### Prerequisites
