@@ -1,4 +1,4 @@
-![picture alt](./images/imageciet.png "CI&T Logo")
+![picture alt](./images/cietlogo.png "CI&T Logo")
 
 # QA Challenge CI&T
 [![E2E library: Cypress](https://img.shields.io/badge/E2E%20Framework-Cypress-blue)](https://www.cypress.io/)
