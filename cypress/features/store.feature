@@ -16,6 +16,10 @@ When i log in
 And i choose payment by bank wire
 Then my order must be completed successfully. 
 
+Scenario: Try to make a purchase with a registered user and the user try to log with invalid credentials
+When i log in with invalid credentials
+Then i  should see a message "Authentication failed." 
+
 Scenario: Make a purchase with a unregistered user with check
 When i register
 And i choose payment by check
