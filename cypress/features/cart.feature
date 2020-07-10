@@ -2,9 +2,9 @@
 
 Feature: Cart
 
-    As a user, i want to have a cart to buy products
+    As a user, I want to have a cart to buy products
 
-    Given i access the ecommerce
-    When i choose a product
-    Then i should be redirected to the cart 
+    Given I access the ecommerce
+    When I choose a product
+    Then I should be redirected to the cart 
     And see the summary
