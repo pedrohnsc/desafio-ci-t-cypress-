@@ -14,7 +14,7 @@ describe('As a user, I want to register in e-commerce to buy clothes with succes
     beforeEach(() => { cy.visit('') })
 
     it('Make a purchase with a registered user with bank wire', () => {
-        constants.fillFieldAndPressEnter(homepage.INPUT_SEARCH, 'Faded Short Sleeve T-shirts')
+        constants.fillFieldWithTextAndPressEnter(homepage.INPUT_SEARCH, 'Faded Short Sleeve T-shirts')
         constants.clickWhenClickable(cartPage.BTN_ADD_TO_CART)
         constants.clickWhenClickable(cartPage.BTN_PROCEED_CHECKOUT)
         constants.waitElementToBeVisible(summaryPage.LABEL_IN_STOCK)
@@ -29,7 +29,7 @@ describe('As a user, I want to register in e-commerce to buy clothes with succes
     })
 
     it('Make a purchase with a registered user with check', () => {
-        constants.fillFieldAndPressEnter(homepage.INPUT_SEARCH, 'Faded Short Sleeve T-shirts')
+        constants.fillFieldWithTextAndPressEnter(homepage.INPUT_SEARCH, 'Faded Short Sleeve T-shirts')
         constants.clickWhenClickable(cartPage.BTN_ADD_TO_CART)
         constants.clickWhenClickable(cartPage.BTN_PROCEED_CHECKOUT)
         constants.waitElementToBeVisible(summaryPage.LABEL_IN_STOCK)

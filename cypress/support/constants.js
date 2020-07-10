@@ -1,6 +1,10 @@
 const constants = {
-    fillFieldAndPressEnter(htmlElement, text) {
+    fillFieldWithTextAndPressEnter(htmlElement, text) {
         cy.get(htmlElement).should('be.visible').type(text + '{enter}')
+    },
+
+    fillFieldWithText(htmlElement, text){
+        cy.get(htmlElement).should('be.visible').type(text)
     },
 
     clickWhenClickable(htmlElement) {
